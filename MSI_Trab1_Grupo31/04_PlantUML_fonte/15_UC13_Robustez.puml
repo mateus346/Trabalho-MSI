@@ -1,0 +1,21 @@
+@startuml UC13_Robustez
+left to right direction
+actor "Diretor de Curso" as Diretor
+boundary formFiltrosRelatorio
+control gerarRelatorio
+entity "tutor" as entTutor
+entity "tutorando" as entTutorando
+entity "reuniao" as entReuniao
+boundary pagRelatorioTutoria
+boundary janMensagemErro
+
+Diretor --> formFiltrosRelatorio : escolhe filtros
+formFiltrosRelatorio --> gerarRelatorio : submeter filtros
+gerarRelatorio <-- entTutor : obterTutores
+gerarRelatorio <-- entTutorando : obterTutorandos
+gerarRelatorio <-- entReuniao : obterReunioes
+gerarRelatorio --> pagRelatorioTutoria : [resultado]
+pagRelatorioTutoria --> Diretor : apresenta
+gerarRelatorio --> janMensagemErro : [sem dados / erro]
+janMensagemErro --> Diretor : informa
+@enduml

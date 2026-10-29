@@ -1,0 +1,42 @@
+===========================================================
+ MSI - Trabalho Pratico 1 (ICONIX) - Grupo 31
+ Sistema de Gestao de Tutorias UTC-INF - Fases 1 e 2
+ PASTA DE ENTREGA
+===========================================================
+
+ESTRUTURA
+---------
+01_Relatorio/        -> MSI_Relatorio_Tutorias.docx  (o relatorio = o ".doc")
+02_Diagramas_PNG/    -> 30 diagramas em imagem (.png)
+03_StarUML_mdj/      -> [VAZIO] coloca aqui o(s) .mdj do StarUML
+04_PlantUML_fonte/   -> codigo PlantUML dos diagramas (.puml) - referencia/fonte
+GUIA_StarUML.md      -> lista de elementos por diagrama (para montar no StarUML)
+
+O que o enunciado pede no .zip (seccao 1.2):
+  .doc  -> 01_Relatorio
+  .mdj  -> 03_StarUML_mdj  (FALTA FAZER)
+  .png  -> 02_Diagramas_PNG
+
+
+CHECKLIST ANTES DE ENTREGAR
+---------------------------
+[ ] 1. Completar o numero do aluno "Tomas Pires" na CAPA do relatorio
+       (os outros estao completos; o do Tomas ficou so "2025").
+[ ] 2. No Word, atualizar o INDICE:
+       botao direito no indice -> Atualizar campo -> Atualizar o indice inteiro.
+[ ] 3. (Se o professor for rigoroso com ".doc") Guardar o relatorio tambem como .doc:
+       Word -> Ficheiro -> Guardar como -> tipo "Documento Word 97-2003 (*.doc)".
+[ ] 4. Construir os diagramas no StarUML (ver GUIA_StarUML.md) e GRAVAR o .mdj
+       dentro de 03_StarUML_mdj.
+[ ] 5. Compactar ESTA pasta num .zip com o nome exato:
+         MSI_Trab1_Grupo31.zip
+       (clicar com o botao direito na pasta -> Comprimir / Enviar para -> Pasta comprimida)
+[ ] 6. Enviar o .zip no Moodle.
+
+
+NOTAS
+-----
+- Os .png ja estao prontos e com nomes a condizer com as "Ilustracoes" do relatorio.
+- O PlantUML (04_) NAO e obrigatorio; e so uma ajuda para recriar no StarUML e,
+  se quiseres, pode ir como "fonte" dos diagramas. NAO substitui o .mdj.
+- Prazo da Fase 1+2: 31/10/2026.

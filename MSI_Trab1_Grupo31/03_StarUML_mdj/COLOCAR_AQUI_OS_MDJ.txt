@@ -1,0 +1,5 @@
+Coloca aqui o(s) ficheiro(s) .mdj do StarUML.
+
+Podes entregar um unico ficheiro com todos os diagramas (ex.: Tutorias_UTC-INF.mdj)
+ou um por diagrama, conforme preferires. Usa o guia 'MSI_StarUML_elementos.md'
+e os .puml da pasta 04_PlantUML_fonte como referencia.

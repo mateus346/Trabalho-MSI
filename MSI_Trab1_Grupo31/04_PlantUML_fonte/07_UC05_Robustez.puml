@@ -1,0 +1,19 @@
+@startuml UC05_Robustez
+left to right direction
+actor Tutorando
+boundary formRegisto
+control registarConta
+entity "aluno" as entAluno
+entity "utilizador" as entUtilizador
+boundary janConfirmacao
+boundary janMensagemErro
+
+Tutorando --> formRegisto : regista-se
+formRegisto --> registarConta : submeter dados
+registarConta <-- entAluno : obterAluno
+registarConta <--> entUtilizador : criarConta
+registarConta --> janConfirmacao : [sucesso]
+janConfirmacao --> Tutorando : confirma
+registarConta --> janMensagemErro : [erro]
+janMensagemErro --> Tutorando : informa erro
+@enduml

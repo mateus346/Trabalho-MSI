@@ -1,0 +1,24 @@
+@startuml UC08_Robustez
+left to right direction
+actor Tutorando
+actor Tutor
+boundary formPedidoReuniao
+control registarPedido
+control enviarNotificacao
+entity "reuniao" as entReuniao
+entity "tutorando" as entTutorando
+entity "mensagem" as entMensagem
+boundary janNotificacaoTutor
+boundary janMensagemErro
+
+Tutorando <--> formPedidoReuniao : solicita reunião
+formPedidoReuniao <--> registarPedido : submeter pedido
+registarPedido <--> entReuniao : criarPedido
+registarPedido <-- entTutorando : obterTutor
+registarPedido --> enviarNotificacao : notificar tutor
+enviarNotificacao <--> entMensagem : registarMensagem
+enviarNotificacao --> janNotificacaoTutor : avisa tutor
+janNotificacaoTutor --> Tutor
+registarPedido --> janMensagemErro : [erro]
+janMensagemErro --> Tutorando : informa erro
+@enduml

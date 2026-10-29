@@ -1,0 +1,28 @@
+@startuml UC07_Robustez
+left to right direction
+actor Tutorando
+actor Tutor
+boundary formFichaFrequencia
+control obterUCs
+control guardarFicha
+control notificarTutor
+entity "unidadeCurricular" as entUC
+entity "fichaFrequencia" as entFicha
+entity "avaliacao" as entAvaliacao
+entity "mensagem" as entMensagem
+boundary janNotificacaoTutor
+boundary janMensagemErro
+
+Tutorando <--> formFichaFrequencia : preenche ficha
+formFichaFrequencia <--> obterUCs : listar UCs
+obterUCs <-- entUC : consultar
+formFichaFrequencia --> guardarFicha : submeter notas
+guardarFicha <--> entFicha : gravar ficha
+guardarFicha <--> entAvaliacao : gravar notas
+guardarFicha --> notificarTutor : [comentário]
+notificarTutor <--> entMensagem : registarMensagem
+notificarTutor --> janNotificacaoTutor : avisa tutor
+janNotificacaoTutor --> Tutor
+guardarFicha --> janMensagemErro : [erro]
+janMensagemErro --> Tutorando : informa erro
+@enduml

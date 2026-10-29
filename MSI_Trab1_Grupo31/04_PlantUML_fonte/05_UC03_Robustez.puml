@@ -1,0 +1,25 @@
+@startuml UC03_Robustez
+left to right direction
+actor Coordenador
+actor Tutor
+actor Tutorando
+boundary formAtribuicao
+control atribuirTutor
+entity "aluno" as entAluno
+entity "tutor" as entTutor
+control enviarNotificacao
+entity "mensagem" as entMensagem
+boundary janNotificacaoTutor
+boundary janNotificacaoTutorando
+
+Coordenador <--> formAtribuicao : atribui tutor
+formAtribuicao <--> atribuirTutor : escolher tutor
+atribuirTutor <--> entAluno : associarTutor
+atribuirTutor <-- entTutor : obterTutor
+atribuirTutor --> enviarNotificacao : notificar
+enviarNotificacao <--> entMensagem : registarMensagem
+enviarNotificacao --> janNotificacaoTutor : mensagem ao tutor
+janNotificacaoTutor --> Tutor
+enviarNotificacao --> janNotificacaoTutorando : mensagem ao tutorando
+janNotificacaoTutorando --> Tutorando
+@enduml
